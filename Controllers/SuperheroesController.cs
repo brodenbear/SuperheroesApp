@@ -1,31 +1,44 @@
 ﻿using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
+using SuperheroesApp.Data;
 using SuperheroesApp.Models;
 
 namespace SuperheroesApp.Controllers
 {
     public class SuperheroesController : Controller
     {
+
+        private readonly ApplicationDbContext _context;
+
+        public SuperheroesController(ApplicationDbContext context)
+        {
+            _context = context;
+
+        }
         // GET: SuperheroesController
         public ActionResult Index()
         {
 
             //LINQ query to retrieve all rows from table
-            var superheroes = ""; 
-            return View();
+            var superheroes = _context.Superheroes.ToList();
+            return View(superheroes);
         }
 
         // GET: SuperheroesController/Details/5
         public ActionResult Details(int id)
         {
-
-            //LINQ Query to find specific row from table
-            return View();
+            var superhero = _context.Superheroes.Find(id);
+            if (superhero == null)
+            {
+                return NotFound();
+            }
+            return View(superhero);
         }
 
         // GET: SuperheroesController/Create
         public ActionResult Create()
         {
+           
             return View();
         }
 
