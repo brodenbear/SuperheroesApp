@@ -20,3 +20,9 @@ html {
 body {
   margin-bottom: 60px;
 }
+
+.table {
+    box-shadow: 0 0 0 .5rem black, 0 0 0 .75rem #258cfb;
+    font-display: block;
+    font-style:oblique;
+}
