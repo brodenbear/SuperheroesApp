@@ -10,6 +10,7 @@ namespace SuperheroesApp.Controllers
 
         private readonly ApplicationDbContext _context;
 
+
         public SuperheroesController(ApplicationDbContext context)
         {
             _context = context;
