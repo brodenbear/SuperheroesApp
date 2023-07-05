@@ -5,6 +5,7 @@ html {
 @media (min-width: 768px) {
   html {
     font-size: 16px;
+
   }
 }
 
@@ -15,14 +16,61 @@ html {
 html {
   position: relative;
   min-height: 100%;
+  color-scheme:dark;
+
+
+}
+a {
+    color:greenyellow;
 }
 
 body {
-  margin-bottom: 60px;
+    color: black;
+    margin-bottom: 60px;
+    background-image: url("../images/dev-d2Py_uhXJQo-unsplash.jpg")
 }
 
 .table {
     box-shadow: 0 0 0 .5rem black, 0 0 0 .75rem #258cfb;
     font-display: block;
-    font-style:oblique;
+    font-style: oblique;
+    background-color: dodgerblue;
+    color: greenyellow;
+}
+
+.page {
+    background-color: dodgerblue;
+}
+
+h1 {
+    border: double;
+    border-color: black;
+    color: greenyellow;
+}
+    h1 span {
+        background-color: dodgerblue;
+    }
+
+h4 {
+    border: thick;
+    border-color: white;
+    color: greenyellow;
+}
+    h4 span {
+        background-color:dodgerblue
+    }
+a {
+    border: thick;
+    border-color: white;
+    color: greenyellow;
+}
+    a span {
+        background-color: dodgerblue;
+    }
+.row {
+    box-shadow: 0 0 0 .5rem black, 0 0 0 .75rem #258cfb;
+    font-display: block;
+    font-style: oblique;
+    background-color: dodgerblue;
+    color: greenyellow;
 }
